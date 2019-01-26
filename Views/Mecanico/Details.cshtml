@@ -6,61 +6,79 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>Detalhes</title>
 </head>
 <body>
 
 <div>
-    <h4>Livro</h4>
+    <h4>Detalhes do Mecânico</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.RazaoSocial)
+            Razão Social
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RazaoSocial)
+        </dd>
+        <dt>
+           CNPJ
         </dt>
         <dd>
             @Html.DisplayFor(model => model.CNPJ)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Responsavel)
+           Responsável
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Responsavel)
+        </dd>
+        <dt>
+           CPF
         </dt>
         <dd>
             @Html.DisplayFor(model => model.CPF)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DDDTelefone)
+           Telefone
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Telefone)
+             @Html.DisplayFor(model => model.DDDTelefone)  @Html.DisplayFor(model => model.Telefone)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.DDDCelular)
+            Celular
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Celular)
+            @Html.DisplayFor(model => model.DDDCelular)  @Html.DisplayFor(model => model.Celular)
         </dd>
+        <dt>
+            Endereço
+        </dt>
         <dd>
-            @Html.DisplayFor(model => model.Endereco)
+            @Html.DisplayFor(model => model.Endereco) , CEP:  @Html.DisplayFor(model => model.CEP),  @Html.DisplayFor(model => model.Cidade),  @Html.DisplayFor(model => model.Estado)
         </dd>
-        <dd>
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-        <dd>
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
+        <dt>
+           Latitude
+        </dt>
         <dd>
             @Html.DisplayFor(model => model.Latitude)
         </dd>
+        <dt>
+            Longitude
+        </dt>
         <dd>
             @Html.DisplayFor(model => model.Longitude)
         </dd>
+         <dt>
+            Nota Média
+        </dt>
         <dd>
-            @Html.DisplayFor(model => model.DataCadastro)
+            @Html.DisplayFor(model => model.NotaMedia)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Voltar a listagem</a>
 </div>
 </body>
 </html>

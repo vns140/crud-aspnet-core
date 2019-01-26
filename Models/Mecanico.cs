@@ -14,13 +14,13 @@ namespace estudo.Models
         public string Celular { get; set; }
         public string DDDCelular { get; set; }
         public string Endereco { get; set; }
+        public string Numero { get; set; }
+        public string CEP { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
-        public bool Mecanica { get; set; }
-        public bool Eletrica { get; set; }
-        public bool Suspensao { get; set; }
+        public int NotaMedia { get; set; }
         public DateTime DataCadastro { get; set; }
 
     }

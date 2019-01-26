@@ -6,53 +6,51 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Cadastro de Mecânicos</title>
+    <style>
+        .table-bordered th, .table-bordered td
+        {
+            border: none;
+        }
+    </style>
 </head>
 <body>
+   </br>
+
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-outline-primary">Cadastrar Mecânico</a>
 </p>
-<table class="table">
+<table class="table-striped table-bordered" style="width:100%;">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.RazaoSocial)
+                <th style="padding: 5px;">
+                   Razão Social
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Endereco)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Latitude)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Longitude)
-                </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td style="padding: 5px; width:100%;">
                 @Html.DisplayFor(modelItem => item.RazaoSocial)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
+            <td >
+ <a asp-action="Edit" class="btn btn-outline-dark" asp-route-id="@item.Id"><span class="fas fa-edit"></span ></a> 
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Latitude)
+
+                <a asp-action="Details" class="btn btn-outline-dark" asp-route-id="@item.Id"><span class="fas fa-eye"></span ></a> 
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Longitude)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+               <td>
+                <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.Id"><span class="fas fa-fire"></span ></a>
+           
             </td>
         </tr>
 }
     </tbody>
 </table>
+
 </body>
 </html>

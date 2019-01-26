@@ -53,7 +53,7 @@ namespace estudo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Autor,Preco,Lancamento")] Mecanico mecanico)
+        public async Task<IActionResult> Create([Bind("Id,RazaoSocial,CNPJ,Responsavel,CPF,DDDTelefone,Telefone,DDDCelular,Celular,Endereco,Numero,CEP,Cidade,Estado,Latitude,Longitude")] Mecanico mecanico)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace estudo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Nome,Autor,Preco,Lancamento")] Mecanico mecanico)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,RazaoSocial,CNPJ,Responsavel,CPF,DDDTelefone,Telefone,DDDCelular,Celular,Endereco,Numero,CEP,Cidade,Estado,Latitude,Longitude")] Mecanico mecanico)
         {
             if (id != mecanico.Id)
             {
